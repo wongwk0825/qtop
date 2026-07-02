@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=78.1.1"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "sample-app"
+dynamic = ["version"]
+description = "CI/CD pipeline demo for qtop challenge #433"
+requires-python = ">=3.7"
+[tool.setuptools.dynamic]
+version = {attr = "sample_app.__version__"}
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+[tool.ruff]
+line-length = 180
+lint.select = ["E", "F", "I"]
+target-version = "py37"

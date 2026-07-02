@@ -1,0 +1,10 @@
+.coverage
+.pytest_cache
+.ruff_cache
+__pycache__
+artifacts
+build
+dist
+*.egg-info
+*.pyc
+*.pyo

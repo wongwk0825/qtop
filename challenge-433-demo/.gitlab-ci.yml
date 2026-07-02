@@ -1,0 +1,11 @@
+stages:
+  - test
+modern-python:
+  image: python:3.12.3-bookworm
+  stage: test
+  before_script:
+    - apt-get update
+    - apt-get install -y --no-install-recommends make git
+    - make ci-deps PYTHON=python
+  script:
+    - make ci PYTHON=python
